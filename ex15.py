@@ -6,6 +6,7 @@ txt = open(filename)  # 打开名为filename的文件，将文件对象赋值给
 
 print("Here's your file %r:" % filename)  # 打印一条说明信息
 print(txt.read())  # 调用文件对象的read方法，打印文件内容
+txt.close()
 
 print("Type the filename again:")  # 打印一条提示信息
 file_again = input("> ")  # 打印一个输入提示符，提示输入文件名
@@ -13,3 +14,8 @@ file_again = input("> ")  # 打印一个输入提示符，提示输入文件名
 txt_again = open(file_again)  # 打开文件，并将返回的文件对象赋值给变量txt_again
 
 print(txt_again.read())  # 调用文件对象的read方法，打印文件内容
+txt_again.close()
+
+# study drill 5
+# 如果说用input()获取文件名要比从命令行获取更好的话，
+# 原因应该是input可以输出提示信息，让用户更清楚要做什么
