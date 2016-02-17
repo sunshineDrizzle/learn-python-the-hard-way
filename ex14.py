@@ -1,9 +1,9 @@
 from sys import argv
 
-script, user_name = argv
-prompt = '> '
+script, user_name, time = argv
+prompt = '$ '
 
-print("Hi %s, I'm the %s script." % (user_name, script))
+print("Good %s %s, I'm the %s script." % (time, user_name, script))
 print("I'd like to ask you some questions.")
 print("Do you like me %s?" % user_name)
 likes = input(prompt)
