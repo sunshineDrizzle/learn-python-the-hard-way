@@ -34,3 +34,16 @@ print("Here is a puzzle.")
 what = add(age, subtract(height, multiply(weight, divide(iq, 2))))
 
 print("That becomes: ", what, "Can you do it by hand?")  # Of course I can!
+
+# study drill 2
+what_also = age + (height - weight * (iq / 2))
+print("The result of the normal formula:", what_also)
+
+# study drill 3
+# 题意是让我们修改函数的一部分以产生另一个结果？似乎没什么意义...
+
+# study drill 4
+what_new1 = weight - (age + iq / 2 * height)
+what_new2 = subtract(weight, add(age, multiply(divide(iq, 2), height)))
+print("what_new1:", what_new1)
+print("what_new2:", what_new2)
