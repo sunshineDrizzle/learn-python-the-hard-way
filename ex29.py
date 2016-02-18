@@ -37,7 +37,7 @@ if people == dogs:
 # 至于这里缩进4个空格是因为PEP8编码风格要求缩进是4的倍数的空格
 
 # study drill 3
-# 如果不缩进的话，程序会认为这些代码不是if语句内的，而是和if属于同一个层次
+# 如果不缩进的话会引发程序错误
 
 # study drill 4
 if dogs != cats:
