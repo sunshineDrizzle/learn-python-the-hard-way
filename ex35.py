@@ -6,7 +6,7 @@ def gold_room():
 
     choice = input("> ")
     if "0" in choice or "1" in choice:
-        how_much = int(choice)
+        how_much = float(choice)
         if how_much < 50:
             print("Nice, you're not greedy, you win!")
             exit(0)
@@ -35,6 +35,8 @@ def bear_room():
             dead("The bear gets pissed off and chews your leg off.")
         elif choice == "open door" and bear_moved:
             gold_room()
+        elif choice == "fight with bear":  # study drill 4
+            dead("You are a brave man. However, you are dead.")
         else:
             print("I got no idea what that means.")
 
@@ -75,3 +77,11 @@ def start():
 
 
 start()
+
+# study drill 5
+# 题目中的bugs应该是指用户输入带小数点（原题用的是int()，我改成了float()）且包含1或0的数字字符串会引发错误（事实上输入非数字的字符也会出错）
+# int()函数的作用如下：
+# 如果没有参数则返回0
+# 如果参数只有一个且是数字，则返回一个去掉小数部分（如果有的话）的整数对象
+# 如果参数只有一个且是字符串，则该字符串必须是用来表示整数的，此时会传入一个默认的参数base=10，返回与字符串所表示数字值相同的整型对象
+# 如果参数有两个，则base参数是用来指出另一个参数的进制的。
