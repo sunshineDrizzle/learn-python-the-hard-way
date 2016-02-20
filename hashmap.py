@@ -108,3 +108,20 @@ def list(aMap):
         if bucket:
             for k, v in bucket:
                 print(k, v)
+
+# study drill 5
+# 用list打印出各键值对的顺序和增添时的顺序不同是因为
+# 增添的时候是按照key的哈希值做一定的运算得到aMap的索引，比较随机(也正是因此模拟了字典的无序性)
+# 而list是按照索引的顺序打印出来的。
+
+
+# study drill 6
+def dump(aMap):
+    for bucket in aMap:
+        if bucket:
+            for i, kv in enumerate(bucket):
+                k, v = kv
+                print(i, k, v)
+
+# study drill 7
+# hash(object)返回对象的哈希值。相同的对象一定有相同的哈希值，而具有相同哈希值的两个对象不一定相同？

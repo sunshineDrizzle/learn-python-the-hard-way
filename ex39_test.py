@@ -40,7 +40,7 @@ hashmap.list(states)
 
 # print every city in state
 print('-' * 10)
-hashmap.list(cities)
+hashmap.dump(cities)
 
 print('-' * 10)
 state = hashmap.get(states, 'Texas')

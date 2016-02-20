@@ -59,3 +59,60 @@ if not state:
 # get a city with a default value
 city = cities.get('TX', 'Does Not Exist')
 print("The city for the state 'TX' is: %s" % city)
+
+
+# study drill 1
+# create a mapping of province to abbreviation
+provinces = {
+    'Zhejiang': 'ZJ',
+    'Shaanxi': 'SX',
+    'Anhui': 'AH',
+    'Jiangsu': 'JS',
+    'Jiangxi': 'JX'
+}
+
+# create a basic set of provinces and some cities in them
+cities = {
+    'ZJ': 'Wenzhou',
+    'SX': 'Xi\'an',
+    'AH': 'Hefei'
+}
+
+# add some more cities
+cities['JS'] = 'Soochow'
+cities['JX'] = 'Nanchang'
+
+# print out some cities
+print("ZJ Province has:", cities['ZJ'])
+print("SX Province has:", cities['SX'])
+
+# print some province
+print("Zhejiang's abbreviation is: ", provinces['Zhejiang'])
+print("Shaanxi's abbreviation is: ", provinces['Shaanxi'])
+
+# do it by using the province then cities dict
+print("Zhejiang has: ", cities[provinces['Zhejiang']])
+print("Shaanxi has: ", cities[provinces['Shaanxi']])
+
+# print every province's abbreviation
+for province, abbrev in provinces.items():
+    print("%s is abbreviated %s" % (province, abbrev))
+
+# print every city in province
+for abbrev, city in cities.items():
+    print("%s has the city %s" % (abbrev, city))
+
+# now do both at the same time
+for province, abbrev in provinces.items():
+    print("%s province is abbreviated %s and has city %s" % (
+        province, abbrev, cities[abbrev]))
+
+# safely get a abbreviation by province that might not be there
+province = provinces.get('Guangdong')
+
+if not province:
+    print("Sorry, no Guangdong.")
+
+# get a city with a default value
+city = cities.get('GD', 'Does Not Exist')
+print("The city for the province 'GD' is: %s" % city)
