@@ -1,5 +1,6 @@
 # Animal is-a object (yes, sort of confusing) look at the extra credit
 class Animal(object):
+
     # study drill 3
     def eat(self):
         print("Oh, that's delicious!")
@@ -51,6 +52,7 @@ class Employee(Person):
 
 # Fish is-a object
 class Fish(object):
+
     # study drill 3
     def swim(self):
         print("I'm swimming!")
