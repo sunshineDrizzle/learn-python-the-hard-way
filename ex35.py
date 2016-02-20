@@ -6,7 +6,11 @@ def gold_room():
 
     choice = input("> ")
     if "0" in choice or "1" in choice:
-        how_much = float(choice)
+        try:
+            how_much = float(choice)  # 允许浮点输入
+        except ValueError:  # 捕捉用户不规范的输入，并给出处理
+            dead("Man, learn to type a number.")
+
         if how_much < 50:
             print("Nice, you're not greedy, you win!")
             exit(0)
